@@ -1,0 +1,253 @@
+/* CSS BY Hailie Caetta */
+/* IMPORTED FONTS */
+@import 
+url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ROOT VARIABLES */
+:root {
+    --midnight-blue: #1F2A44;
+    --olive-green: #76885B;
+    --champagne-gold: #E5C185;
+    --linen: #F8F4EC;
+    --dark-charcoal: #2B2B2B;
+    --soft-white: #FAF9F6;
+}
+/* GLOBAL STYLES (mobile first/small) */
+
+body {
+    font-family: Playfair Display;
+}
+header {
+    font-family: Playfair Display;
+    background-color: var(--midnight-blue);
+    color: var(--soft-white);
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--champagne-gold);
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+header p {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin: 1rem;
+    font-style: italic;
+}
+
+nav li {
+    display: inline;
+}
+nav li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--midnight-blue);
+    font-weight: bold;
+    margin: 2.5rem;
+}
+
+main h2 {
+    font-size: 2rem;
+    padding: 1.5rem 3rem .5rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+p {
+    line-height: 1.6em;
+    margin: 1em 3em;
+    margin-bottom: 2em;
+}
+
+section {
+    border-bottom: 2px solid var(--champagne-gold);
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.green-box {
+    background-color: var(--olive-green);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px 0 var(--dark-charcoal);
+    color: var(--soft-white);
+}
+
+.green-box p{
+    margin: 0;
+    padding: 1em .5em .5em 0em;
+    line-height: 1.6em;
+}
+
+.green-box ul {
+    list-style:disc;
+    padding-left: 1em;
+    line-height: 1.6em;
+
+}
+
+#photocard {
+    background-color: var(--soft-white);
+    border-radius: 20px;
+    box-shadow: 0 2px 20px 0 var(--dark-charcoal);
+    margin: 10px;
+}
+
+#photocard img {
+    width: 100%;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+}
+
+#photocard p {
+    text-align: center;
+    padding-bottom: .75em;
+    font-style: italic;
+}
+
+#button {
+    text-align: center;
+
+}
+
+#button a{
+    background-color: var(--olive-green);
+    color: var(--soft-white);
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 20px 0 20px 0;
+    font-size: 1.5em ;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--midnight-blue);
+    text-align: center;
+    color: var(--soft-white);
+}
+
+address {
+    padding-top: 6em;
+    font-size: 1.1em;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--soft-white);
+    font-size: 1.1em;
+}
+
+#photocards, #offerings {
+    display: grid;
+    gap: 0.5rem;
+}
+
+a[href^="mailto:"] {
+    color: var(--champagne-gold);
+    font-weight: bold;
+}
+
+a[href*="insta"], a[href*="facebook"] {
+    color: var(--champagne-gold);
+    font-weight: bold;
+    
+}
+
+footer ul{    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* MEDIA QUERY (medium) */
+@media (min-width: 600px) {
+    #offerings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #photocards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .basket {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MEDIA QUERY (large) */
+@media (min-width: 900px) {
+    #offerings {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #photocards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* MEDIA QUERY (xl) */
+@media (min-width: 1200px) {
+    #photocards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
