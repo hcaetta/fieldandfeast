@@ -145,20 +145,20 @@ section {
 
 }
 
-#photocard {
+.photocard {
     background-color: var(--soft-white);
     border-radius: 20px;
     box-shadow: 0 2px 20px 0 var(--dark-charcoal);
     margin: 10px;
 }
 
-#photocard img {
+.photocard img {
     width: 100%;
     border-start-start-radius: 10px;
     border-start-end-radius: 10px;
 }
 
-#photocard p {
+.photocard p {
     text-align: center;
     padding-bottom: .75em;
     font-style: italic;
